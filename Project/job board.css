@@ -1,0 +1,586 @@
+/* Reset some default styles for better consistency */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Remove default margin */
+    padding: 0;
+}
+
+/* Style for the header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0; /* Increased padding for better spacing */
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    align-items: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+}
+
+/* Style for the logo */
+.logo {
+    font-size: 20px; /* Corrected the property name */
+    font-weight: bold;
+    margin-left: 20px;
+    text-transform: uppercase; /* Uppercase text for emphasis */
+}
+
+
+/* Add hover effect for the logo */
+.logo:hover {
+    color: #ff6600; /* Change text color on hover */
+}
+
+/* Hover effect for navigation links */
+.nav-links a:hover {
+    color: #ff6600; /* Change text color on hover */
+}
+
+
+/* Style for the navigation menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+    padding: 0; 
+}
+
+/* Style for individual navigation menu items */
+nav ul li {
+    margin-right: 20px;
+    text-decoration: none; /* Remove underline by default */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Style for navigation menu item links */
+nav ul li a {
+    color: #fff;
+    text-decoration: none; /* Remove underline by default */
+    transition: text-decoration 0.3s ease; /* Smooth text-decoration transition on hover */
+}
+
+/* Hover effect for navigation menu items */
+nav ul li:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Hover effect for navigation menu item links */
+nav ul li a:hover {
+    text-decoration: none; /* Remove underline on hover */
+    color: #ff6600; /* Change text color on hover */
+}
+
+/* Container for job categories */
+/* Job Categories Section */
+.job-categories {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    flex-wrap: nowrap;
+}
+
+.job-category {
+    min-width: 40vh;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border 0.3s ease, width 0.3s ease; /* Add width transition */
+    cursor: pointer;
+    opacity: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow:visible ;
+   
+}
+
+.job-category p {
+    display: none; /* Initially hide the additional content */
+}
+
+.job-category:hover {
+    transform: scale3d(2,2,1);
+    transform: scaleX(20px);
+    color: rgb(255, 0, 0);
+    box-shadow: #333;
+    box-sizing: border-box;
+}
+
+.job-category:hover p {
+    display:contents;/* Display the additional content on hover */
+}
+
+@keyframes roll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+/* Additional animation for the job categories */
+.job-categories .job-category {
+    animation: roll 15s linear infinite; 
+    animation-fill-mode: forwards; /* Keeps the last keyframe state */
+    animation-timing-function: linear; /* Linear timing */
+    animation-iteration-count: infinite; /* Keeps the animation looping */
+}
+
+
+
+
+.category-icon img {
+    max-width: 80px;
+    height: auto;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease; /* Add icon transform on hover */
+}
+
+/* Hover effect for job category items */
+.job-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.category-icon:hover img {
+    transform: scale(1.1); /* Scale the icon slightly on hover */
+}
+
+.job-category h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.job-category p {
+    font-size: 16px;
+}
+
+/* Job Listings Section */
+.job-listings {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.job-listing {
+    width: calc(50% - 20px);
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Add smooth transitions */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Hover effect for job listings */
+.job-listing:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.job-listing h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.company {
+    font-weight: bold;
+    color: #007BFF;
+}
+
+.location {
+    color: #555;
+    margin-top: 5px;
+}
+
+.deadline {
+    color: #777;
+    margin-top: 10px;
+}
+
+
+.job-listing a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #007BFF; 
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.job-listing a:hover {
+    background-color: #0056b3; }
+
+/* Benefits Section */
+.benefits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.benefit {
+    width: calc(50% - 20px);
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Add smooth transitions */
+    cursor: pointer; /* Change cursor to pointer on hover */
+   
+}
+
+.benefit i {
+    font-size: 36px;
+    color: #007BFF;
+    transition: transform 0.3s ease; /* Add icon transform on hover */
+}
+
+.benefit h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.benefit p {
+    font-size: 16px;
+}
+
+/* Hover effect for benefits */
+.benefit:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+/* Hover effect for benefit icons */
+.benefit:hover i {
+    transform: scale(1.1); /* Scale the icon slightly on hover */
+}
+
+/* Entrance animation for benefits */
+@keyframes benefitEntrance {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply the entrance animation to benefits */
+.benefit:nth-child(odd) {
+    animation: benefitEntrance 0.5s ease-in-out forwards;
+}
+
+.benefit:nth-child(even) {
+    animation: benefitEntrance 0.5s ease-in-out forwards;
+    animation-delay: 0.2s; /* Delay the animation for even benefits */
+}
+
+/* Testimonials Section */
+/* Style the testimonials container */
+.testimonials {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    flex-wrap: nowrap;
+    display: flex;
+    overflow: visible; /* Hide overflowing content */
+     /* Make the container full-width */
+    animation: scroll 20s linear infinite; /* Apply the scrolling animation */
+}
+
+/* Style each testimonial */
+.testimonial {
+    min-width: fit-content;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover animations */
+    display: inline-block;
+    margin-right: 20px; /* Add space between testimonials */
+}
+
+/* Hover effect for testimonials */
+.testimonial:hover {
+    transform: translateY(-5px); /* Lift the testimonial slightly on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+}
+
+.testimonial-text {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    color: #007BFF;
+    font-size: 16px;
+}
+
+/* Keyframes for scrolling animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(100%); /* Start from the right edge */
+    }
+    100% {
+        transform: translateX(-100%); /* Move to the left edge */
+    }
+}
+
+
+/*  Footer Section */
+footer {
+    background-color: #333;
+    width: auto;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+
+footer h3 {
+    width: auto;
+
+    font-size: 24px; 
+    margin-bottom: 20px; 
+}
+
+footer p {
+    width: auto;
+
+    font-size: 18px; 
+    margin: 10px 0; 
+}
+
+/* Styling for Footer Links */
+.footer-links ul {
+
+    width: auto;
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    width: auto;
+    margin: 10px 0; /* Increased margin for links */
+}
+
+.footer-links ul li a {
+    width: auto;
+
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.footer-links ul li a:hover {
+    width: auto;
+
+    color: #ff6600; /* Change link color on hover */
+    text-decoration: underline;
+}
+
+/* Styling for Social Media Icons */
+.social-media ul {
+    width: auto;
+
+    list-style-type: none;
+    padding: 0;
+}
+/* 
+.social-media ul li {
+    display: inline;
+    margin-right: 20px; /* Increased margin between icons */
+
+
+.social-media ul li a {
+    width: auto;
+
+    color: #fff;
+    text-decoration: none;
+    font-size: 32px; /* Larger font size for icons */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Add specific styles for social media icons (Font Awesome or other icon libraries) */
+.social-media ul li a.fa-facebook:hover {
+    width: auto;
+
+    color: #1877f2; /* Facebook blue color */
+}
+
+.social-media ul li a.fa-twitter:hover {
+    width: auto;
+
+    color: #1da1f2; /* Twitter blue color */
+}
+
+.social-media ul li a.fa-linkedin:hover {
+    width: auto;
+
+    color: #0e76a8; /* LinkedIn blue color */
+} */
+
+.blog-post {
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    padding-bottom: 20px;}
+    .blog-post img {
+        max-width: 100%;}
+    .blog-post h2 {
+        font-size: 24px;
+        margin-top: 10px;
+    }
+    
+    .blog-post p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .blog-post a {
+        display: inline-block;
+        margin-top: 10px;
+        text-decoration: none;
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+    
+    .blog-post a:hover {
+        background-color: #555;
+    }
+    footer {
+        width: auto;
+        text-align: center;
+        padding: 20px;
+        background-color: #333;
+        color: #fff;
+    }
+    .hero {
+        height: auto;
+        width: auto;
+        background-image: linear-gradient(white, rgb(183, 41, 41), black 80%, white);
+        background-size: contain;
+        margin-bottom: 50px;
+        background-position: center;
+        color: #fff;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 70px 0;
+        transition: background-color 0.5s ease, color 0.5s ease;
+        position: relative; /* Add relative positioning for the animation */
+    }
+    
+    .hero:hover {
+        background-color: #ff6600;
+        color: #000;
+    }
+    
+    /* Keyframes for text drop animation */
+    @keyframes textDrop {
+        0% {
+            transform: translateY(-100%); /* Initial position above */
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0); /* Final position */
+            opacity: 1;
+        }
+    }
+    
+    .hero:hover::before {
+        content: 'Discover Your Dream Job Today.'; 
+        text-align:center; padding:20px; color:rgb(255,255,255); font-size:40px; font-weight:bold;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        animation: textDrop 0.5s ease forwards; /* Apply the drop animation */
+    }
+    
+    .box{text-align: center;
+        background-color: rgb(255, 17, 17);
+        color: white;
+        font-size: 50px;
+        display: none;}
+        @media (max-width: 400px) {
+            #box1 {
+                display: block;
+            }
+        }
+        
+        @media (min-width: 401px) and (max-width: 600px) {
+            #box2 {
+                display: none;
+                background-color: green;
+            }
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        .left {
+            background-color: #4a92df;
+            padding: 20px;
+            float: left;
+            width: 20%;
+        }
+        
+        .main {
+            background-color: #da6fdf;
+            text-align: center;
+            padding: 20px;
+            float: left;
+            width: 60%;
+        }
+        
+        .right {
+            background-color: #e2ea73;
+            padding: 20px;
+            float: left;
+            width: 20%;
+        }
+        
+        @media screen and (min-width: 500px) and (max-width: 800px) {
+            .left,
+            .main,
+            .right {
+                width: 100px;
+            }
+        }
+        

@@ -1,0 +1,227 @@
+/* Basic styling */
+
+/* Style for the header */
+header 
+{
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0; /* Increased padding for better spacing */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+}
+
+/* Style for the logo */
+.logo 
+{
+    font-size: 20px; /* Corrected the property name */
+    font-weight: bold;
+    margin-left: 20px;
+    text-transform: uppercase; /* Uppercase text for emphasis */
+}
+
+/* Add hover effect for the logo */
+.logo:hover {
+    color: #ff6600; /* Change text color on hover */
+}
+
+/* Hover effect for navigation links */
+.nav-links a:hover {
+    color: #ff6600; /* Change text color on hover */
+}
+
+
+/* Style for the navigation menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+    padding: 0; 
+}
+
+
+nav ul li {
+    margin-right: 20px;
+    text-decoration: none; 
+    transition: color 0.3s ease;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none; 
+    transition: text-decoration 0.3s ease; 
+}
+
+
+nav ul li:hover {
+    text-decoration: underline; 
+}
+
+nav ul li a:hover {
+    text-decoration: none; 
+    color: #ff6600; 
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+fieldset {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: 0 auto;
+    animation: fadeIn 1s ease;
+}
+
+/* Form animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Form input styling */
+h4 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+input[type="email"],
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Marquee animation */
+.blink {
+    animation: blink 2s linear infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+/*  Footer Section */
+footer {
+    background-color: #333;
+    width: auto;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+
+footer h3 {
+    width: auto;
+
+    font-size: 24px; 
+    margin-bottom: 20px; 
+}
+
+footer p {
+    width: auto;
+
+    font-size: 18px; 
+    margin: 10px 0; 
+}
+.footer-links ul {
+
+    width: auto;
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    width: auto;
+    margin: 10px 0; /* Increased margin for links */
+}
+
+.footer-links ul li a {
+    width: auto;
+
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.footer-links ul li a:hover {
+    width: auto;
+
+    color: #ff6600; /* Change link color on hover */
+    text-decoration: underline;
+}
+
+/* Styling for Social Media Icons */
+.social-media ul {
+    width: auto;
+
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-media ul li a {
+    width: auto;
+
+    color: #fff;
+    text-decoration: none;
+    font-size: 32px; 
+    transition: color 0.3s ease; 
+}
+
+.social-media ul li a.fa-facebook:hover {
+    width: auto;
+
+    color: #1877f2; 
+}
+
+.social-media ul li a.fa-twitter:hover {
+    width: auto;
+
+    color: #1da1f2; }
+
+.social-media ul li a.fa-linkedin:hover {
+    width: auto;
+
+    color: #0e76a8;
+} 
