@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="form.css">
+    <script>
+        function validateForm() {
+            var sname = document.getElementById("Sname").value;
+            var fname = document.getElementById("Fname").value;
+            var snumber = document.getElementById("Snumber").value;
+            var username = document.getElementById("username").value;
+            var pwd = document.getElementById("pwd").value;
+            var confirmPwd = document.getElementById("confirmPwd").value;
+            var email = document.getElementById("email").value;
+
+            // Simple validation for required fields
+            if (sname === "" || fname === "" || snumber === "" || username === "" || pwd === "" || confirmPwd === "" || email === "") {
+                alert("All fields must be filled out");
+                return false;
+            }
+
+            // Check if passwords match
+            if (pwd !== confirmPwd) {
+                alert("Passwords do not match");
+                return false;
+            }
+
+            // Validate email format
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("Invalid email address");
+                return false;
+            }
+             // Validate mobile number format (assuming 10-digit number)
+             var mobileRegex = /^\d{10}$/;
+            if (!mobileRegex.test(snumber)) {
+                alert("Invalid mobile number");
+                return false;
+            }
+    
+
+            // If all checks pass, the form is valid
+            alert("Form submitted successfully");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Screenshot 2023-09-19 210545.png" width="100px" height="90px" >
+        </div>
+        <nav>
+            <ul>
+                <li><a href="file:///C:/Users/Rhythm/OneDrive/Desktop/FEE%20chitkara/chitkara/FEE/class-1/Project/job%20board%20platform.html">Home</a></li>
+                <li><a href="file:///C:/Users/Rhythm/OneDrive/Desktop/FEE%20chitkara/chitkara/FEE/class-1/Project/jobs.html">Browse Jobs</a></li>
+                <li><a href="file:///C:/Users/Rhythm/OneDrive/Desktop/FEE%20chitkara/chitkara/FEE/class-1/Project/aboutus.html">About Us</a></li>
+                <li><a href="file:///C:/Users/Rhythm/OneDrive/Desktop/FEE%20chitkara/chitkara/FEE/class-1/Project/blog.html">Blog</a></li>
+                <li><a href="file:///C:/Users/Rhythm/OneDrive/Desktop/FEE%20chitkara/chitkara/FEE/class-1/Project/sign%20in.html">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+    <form onsubmit="return validateForm()">
+
+        <fieldset>
+        <img src="Screenshot 2023-09-19 210545.png" align="right" width="100">
+            <legend>Personal Information</legend>
+            <br><br><br><br>
+            <h4>Student name :</h4>
+            <input type="text" id="Sname" name="Sname" placeholder="Enter name here"><br>
+
+            <h4>Father's name :</h4>
+            <input type="text" id="Fname" name="Fname" placeholder="Enter father's name here"><br>
+
+            <h4>Mobile number :</h4>
+            <input type="tel" id="Snumber" name="Snumber" placeholder="Enter mobile number"><br>
+
+            <h4>Username :</h4>
+            <input type="text" id="username" name="username" placeholder="Enter username here"><br>
+
+            <h4>Password :</h4>
+            <input type="password" id="pwd" name="pwd" placeholder="Enter password"><br>
+
+            <h4>Confirm Password :</h4>
+            <input type="password" id="confirmPwd" name="confirmPwd" placeholder="Confirm password"><br>
+
+            <h4>Gender:</h4>
+            <input type="radio" id="male" name="gender" value="Male"> Male
+            <input type="radio" id="female" name="gender" value="Female"> Female
+            <input type="radio" id="other" name="gender" value="Other"> Other<br>
+
+            <h4>Enter your birthday:</h4>
+            <input type="date" id="birthday" name="birthday"><br>
+
+            <h4>Enter your email:</h4>
+            <input type="email" id="email" name="email"><br><br>
+
+            <h4>Upload your image:</h4>
+            <input type="file" id="image" name="image"><br><br>
+
+       
+
+            <textarea rows="5" cols="" name="review" placeholder="Write a review"></textarea><br>
+
+            <center><button type="submit" >SUBMIT</button></center>
+            <marquee class="blink" style="background-color: red">Fill the form carefully</marquee>
+        </fieldset>
+    </form>
+</body>
+<footer>
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+           <p> Email: rhythm1189.be23@chitkara.edu.in ; ravneet1188.be23@chitkara.edu.in ; ranjeet1187.be23@chitkara.edu.in
+        </li></p>
+            <p>Phone: +91 7324929302</p>
+            <p>Address: Chitkara University , Rajpura, India</p>
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Sitemap</a></li>
+            </ul>
+        </div>
+        <div class="social-media">
+            <h3>Follow Us</h3>
+            <ul>
+                <li><a href="#" class="fab fa-facebook"></a></li>
+                <li><a href="#" class="fab fa-twitter"></a></li>
+                <li><a href="#" class="fab fa-linkedin"></a></li>
+            </ul>
+        </div>
+        <p>&copy; 2023 Job Board platform</p>
+    </footer> 
+</html>
